@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "lifegoeson",
+  "name": "Life Goes On",
+  "description": "A Life about how Life goes on!",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "http://imbluesmedia.com",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["BlueNinjar"],
+  "credits": "BlueNinjar",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

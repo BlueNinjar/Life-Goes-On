@@ -11,6 +11,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import sun.applet.Main;
 
 @Mod(modid = LifeGoesOn.MODID, name = LifeGoesOn.NAME, version = LifeGoesOn.VERSION)
 public class LifeGoesOn {
@@ -38,7 +40,6 @@ public class LifeGoesOn {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-
         LGORecipe.Init();
         proxy.init(event);
 

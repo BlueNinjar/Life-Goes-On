@@ -13,10 +13,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class LGOItems {
 
     public static Item lgoSpeedStone;
+    public static Item lgoFlameStone;
 
     public static void preInit () {
 
         lgoSpeedStone = new SpeedStone("lgo_speed_stone");
+        lgoFlameStone = new FlameStone ("lgo_flame_stone");
 
         registerItems();
 
@@ -24,6 +26,7 @@ public class LGOItems {
 
     public static void registerItems() {
         GameRegistry.register(lgoSpeedStone, new ResourceLocation(LifeGoesOn.MODID, "lgo_speed_stone"));
+        GameRegistry.register(lgoFlameStone, new ResourceLocation(LifeGoesOn.MODID, "lgo_flame_stone"));
 
     }
 

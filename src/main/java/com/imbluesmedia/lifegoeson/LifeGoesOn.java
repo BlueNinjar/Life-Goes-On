@@ -1,6 +1,8 @@
 package com.imbluesmedia.lifegoeson;
 
+import com.imbluesmedia.lifegoeson.item.LGOItems;
 import com.imbluesmedia.lifegoeson.proxy.CommonProxy;
+import com.imbluesmedia.lifegoeson.recipe.LGORecipe;
 import com.imbluesmedia.lifegoeson.tab.CreativeTabLGO;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -29,6 +31,7 @@ public class LifeGoesOn {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         tabLGO = new CreativeTabLGO(CreativeTabs.getNextID(),"tab_lgo");
+        LGOItems.preInit();
         proxy.preInit(event);
 
     }
@@ -36,6 +39,7 @@ public class LifeGoesOn {
     @EventHandler
     public void init(FMLInitializationEvent event) {
 
+        LGORecipe.Init();
         proxy.init(event);
 
     }

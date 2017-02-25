@@ -1,9 +1,11 @@
 package com.imbluesmedia.lifegoeson;
 
+import com.imbluesmedia.lifegoeson.block.LGOBlock;
 import com.imbluesmedia.lifegoeson.item.LGOItems;
 import com.imbluesmedia.lifegoeson.proxy.CommonProxy;
 import com.imbluesmedia.lifegoeson.recipe.LGORecipe;
 import com.imbluesmedia.lifegoeson.tab.CreativeTabLGO;
+import com.imbluesmedia.lifegoeson.world.LGOWorldGeneration;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -12,6 +14,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import sun.applet.Main;
 
 @Mod(modid = LifeGoesOn.MODID, name = LifeGoesOn.NAME, version = LifeGoesOn.VERSION)
@@ -34,6 +37,8 @@ public class LifeGoesOn {
     public void preInit(FMLPreInitializationEvent event) {
         tabLGO = new CreativeTabLGO(CreativeTabs.getNextID(),"tab_lgo");
         LGOItems.preInit();
+        LGOBlock.preInit();
+        GameRegistry.registerWorldGenerator(new LGOWorldGeneration(), 3);
         proxy.preInit(event);
 
     }

@@ -1,14 +1,21 @@
 package com.imbluesmedia.lifegoeson.item;
 
 import com.imbluesmedia.lifegoeson.LifeGoesOn;
+import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -22,9 +29,16 @@ public class FlameStone extends Item {
         setMaxStackSize(1);
 
     }
+
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+
+        return super.onItemRightClick(itemStackIn , worldIn, playerIn, hand);
+    }
+
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        tooltip.add("Fire protection when held");
+        tooltip.add(Color.BLUE + "Fire protection when held");
         super.addInformation(stack, playerIn, tooltip, advanced);
     }
 

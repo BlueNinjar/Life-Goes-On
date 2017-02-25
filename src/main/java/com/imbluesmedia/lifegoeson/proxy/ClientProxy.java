@@ -1,5 +1,6 @@
 package com.imbluesmedia.lifegoeson.proxy;
 
+import com.imbluesmedia.lifegoeson.block.LGOBlock;
 import com.imbluesmedia.lifegoeson.item.LGOItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -18,6 +19,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent event) {
         LGOItems.registerRenders();
+        LGOBlock.registerRenders();
 
     }
 

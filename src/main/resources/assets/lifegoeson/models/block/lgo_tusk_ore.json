@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "lifegoeson:blocks/lgo_tusk_ore"
+    }
+}
